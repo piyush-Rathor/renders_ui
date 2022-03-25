@@ -1,10 +1,11 @@
 {
   "expo": {
     "name": "Renters",
-    "slug": "Renters",
+    "slug": "renters",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "description":"this is renters app",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
