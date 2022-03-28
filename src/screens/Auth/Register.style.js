@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 
 export default StyleSheet.create({
   container: {
@@ -36,11 +37,11 @@ export default StyleSheet.create({
   },
   welcomwTextContainer: {
     marginTop: "1%",
-    height: "30%",
+    height: "38%",
     flexDirection: "column",
   },
   welcomeText: {
-    fontSize: 36,
+    fontSize: RFValue(36, 812),
     color: "rgb(38,193,101)",
   },
   textDummyContainer: {

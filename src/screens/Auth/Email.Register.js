@@ -58,15 +58,19 @@ export default StyleSheet.create({
     marginTop: "8%",
   },
   lowerUppaerContainer: {
-    height: "39%",
+      width: "100%",
+    height: "38%",
     marginTop: "5%",
-  },
-  inputgrid: {
+    flexDirection: "column",
+    alignItems: "flex-start",
+},
+inputgrid: {
     width: "100%",
     flexDirection: "column",
     justifyContent: "space-between",
-    height: "15%",
+    height: "20%",
     marginVertical: "5%",
+    marginBottom: "8%",
   },
   border: {
     borderColor: "rgb(38,193,101)",

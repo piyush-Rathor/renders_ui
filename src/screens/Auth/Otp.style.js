@@ -75,6 +75,6 @@ export default StyleSheet.create({
   },
   otpContainer:{
       height: "25%",
-      width: "100%"
+      width: "100%",
   }
 });

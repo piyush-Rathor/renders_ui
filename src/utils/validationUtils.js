@@ -8,7 +8,7 @@ export default {
     }
   },
   isMobileValid: function (mobile) {
-    let reg = /^(?:50|51|52|55|56|58|2|3|4|6|7|9)\d{7}$/;
+    let reg = /^(?:\+971|00971|0)?(?:50|51|52|54|55|56|58|2|3|4|6|7|9)\d{7}$/;
     if (reg.test(mobile)) {
       return true;
     } else {

@@ -43,7 +43,7 @@ const Email = ({ navigation }) => {
             </View>
             <View style={styles.textDummyContainer}>
               <Text style={styles.dummyText}>
-                We will send you an One Time Password on this mobile number
+                Please Enter Your Email
               </Text>
             </View>
           </View>

@@ -3,10 +3,10 @@ import { View, Text, Image } from "react-native";
 import { Button, useToast } from "native-base";
 import { icons } from "../../styles/icons";
 import styles from "./Otp.style";
-import OTPInput from "react-native-otp";
+import OTPTextInput from "react-native-otp-textinput";
 import { useSelector } from "react-redux";
 import authService from "../../services/auth";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+// import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Otp = ({ navigation }) => {
   const toast = useToast();
@@ -17,10 +17,10 @@ const Otp = ({ navigation }) => {
   const confirmAuth = async () => {
     try {
       const { data } = await authService.confirmAuth({ otp, mobileNumber });
-      await AsyncStorage.setItem("token", JSON.stringify(data?.data?.token));
-      if(data.data?.userAllReadyRegistered){
+      // await AsyncStorage.setItem("token", JSON.stringify(data?.data?.token));
+      if (data.data?.userAllReadyRegistered) {
         navigation.navigate("Home");
-      }else{
+      } else {
         navigation.navigate("Email");
       }
     } catch (error) {
@@ -50,17 +50,35 @@ const Otp = ({ navigation }) => {
             </View>
           </View>
           <View style={styles.otpContainer}>
-            <OTPInput
+            {/* <OTPInput
               tintColor="rgb(38,193,101)"
               offTintColor="rgba(209,197,197, 0.31)"
               otpLength={6}
               value={otp || ""}
               onChange={(e) => setOtp(e)}
               containerStyle={{ margin: "1%" }}
+              autoFocusOnLoad={true}
               cellStyle={{
                 borderRadius: 8,
                 height: 56,
                 color: "rgb(38,193,101)",
+              }}
+            /> */}
+            <OTPTextInput
+              inputCount={6}
+              handleTextChange={(e) => {
+                setOtp(e.replace(/\D/g, ""));
+              }}
+              textInputStyle="rgb(38,193,101)"
+              style={{
+                width: "12%",
+                backgroundColor: "#fff",
+                color: "rgb(38,193,101)",
+                borderRadius: 8,
+                borderWidth: 1,
+                height: 56,
+                textAlign: "center",
+                borderColor: "rgba(209,197,197, 0.31)",
               }}
             />
           </View>

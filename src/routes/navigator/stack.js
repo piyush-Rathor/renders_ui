@@ -40,14 +40,14 @@ export const authNavigator = createStackNavigator({
     screen: ComapanyOrIndivisual,
     navigationOptions: ({ navigation }) => ({
       title: "",
-      headerRight: () => <SkipHeader navigation={navigation} />,
+      headerRight: () => <SkipHeader navigation={navigation} url="Emirates"/>,
     }),
   },
   Emirates: {
     screen: Emirates,
     navigationOptions: ({ navigation }) => ({
       title: "",
-      headerRight: () => <SkipHeader navigation={navigation} />,
+      headerRight: () => <SkipHeader navigation={navigation} url="Home"/>,
     }),
   },
   Home: {

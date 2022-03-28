@@ -3,7 +3,7 @@ import { Checkbox, Button } from "native-base";
 import styles from "./CompanyorIndiVisual.style";
 import { useState } from "react";
 
-const ComapanyOrIndivisual = ({ navigation }) => {
+const ComapanyOrIndivisual = ({ navigation,url}) => {
   const [value, setValue] = useState("");
   return (
     <View style={styles.container}>
@@ -22,6 +22,7 @@ const ComapanyOrIndivisual = ({ navigation }) => {
             isChecked={value.toString() === "INDIVIDUAL"}
             colorScheme="rgb(219, 219, 219)"
             aria-label="INDIVIDUAL"
+            onPress={() => setValue("INDIVIDUAL")}
           />
           <Text
             style={
@@ -45,6 +46,7 @@ const ComapanyOrIndivisual = ({ navigation }) => {
             isChecked={value.toString() === "COMPANY"}
             colorScheme="rgb(219, 219, 219)"
             aria-label="COMPANY"
+            onPress={() => setValue("COMPANY")}
           />
           <Text
             style={

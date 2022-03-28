@@ -1,7 +1,7 @@
 import axios from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-const baseUrl = "http://localhost:6000"||"http://65.0.81.190:6000";
+const baseUrl = "http://65.0.81.190:6000";
 
 const httpRequest = {};
 
@@ -21,7 +21,7 @@ httpRequest.post = async (url, body, multipart = false) => {
   if (multipart) {
     headers["Content-Type"] = "application/json";
   }
-  await getSessAuthToken();
+  // await getSessAuthToken();
   return new Promise((resolve, reject) => {
     axios
       .post(`${baseUrl}/${url}`, body, { headers })
