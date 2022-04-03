@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 
 export default StyleSheet.create({
   container: {
@@ -40,7 +41,7 @@ export default StyleSheet.create({
     flexDirection: "column",
   },
   welcomeText: {
-    fontSize: 36,
+    fontSize: RFValue(31, 812),
     color: "rgb(38,193,101)",
   },
   textDummyContainer: {
@@ -49,7 +50,7 @@ export default StyleSheet.create({
     alignItems: "center",
   },
   dummyText: {
-    fontSize: 16,
+    fontSize: RFValue(16, 812),
   },
   button: {
     backgroundColor: "rgb(38,193,101)",
@@ -59,7 +60,7 @@ export default StyleSheet.create({
   },
   lowerUppaerContainer: {
       width: "100%",
-    height: "38%",
+    height: "45%",
     marginTop: "5%",
     flexDirection: "column",
     alignItems: "flex-start",
@@ -69,7 +70,6 @@ inputgrid: {
     flexDirection: "column",
     justifyContent: "space-between",
     height: "20%",
-    marginVertical: "5%",
     marginBottom: "8%",
   },
   border: {

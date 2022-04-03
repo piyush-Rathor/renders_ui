@@ -1,7 +1,7 @@
 import axios from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-const baseUrl = "http://65.0.81.190:6000";
+const baseUrl = "http://65.0.81.190:8080";
 
 const httpRequest = {};
 

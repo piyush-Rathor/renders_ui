@@ -53,8 +53,22 @@ export default StyleSheet.create({
     borderColor: "rgb(185,178,178)",
     borderRadius: 8,
   },
+  photoViewToubkle: {
+    height: "90%",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "95%",
+    borderWidth: 0,
+    borderColor: "rgb(185,178,178)",
+    borderRadius: 8,
+  },
   emeritsPhoto:{
     width: "30%",
     height: "30%",
+  },
+  image:{
+    height: "100%",
+    width: "100%",
   }
 });

@@ -7,7 +7,8 @@ import ComapanyOrIndivisual from "../../screens/Auth/CompanyOrIndivisual";
 import Emirates from "../../screens/Auth/Emirates";
 import SkipHeader from "../../components/helpers/Skip";
 import Home from "../../screens/Auth/Home";
-import Email from "../../screens/Auth/Email"
+import Email from "../../screens/Auth/Email";
+import EmiratesForm from "../../screens/Auth/EmiratesForm"
 
 export const authNavigator = createStackNavigator({
   WelComePage: {
@@ -30,7 +31,7 @@ export const authNavigator = createStackNavigator({
       title: "",
     }),
   },
-  Email:{
+  Email: {
     screen: Email,
     navigationOptions: ({ navigation }) => ({
       title: "",
@@ -40,14 +41,20 @@ export const authNavigator = createStackNavigator({
     screen: ComapanyOrIndivisual,
     navigationOptions: ({ navigation }) => ({
       title: "",
-      headerRight: () => <SkipHeader navigation={navigation} url="Emirates"/>,
+      headerRight: () => <SkipHeader navigation={navigation} url="Emirates" />,
     }),
   },
   Emirates: {
     screen: Emirates,
     navigationOptions: ({ navigation }) => ({
       title: "",
-      headerRight: () => <SkipHeader navigation={navigation} url="Home"/>,
+      headerRight: () => <SkipHeader navigation={navigation} url="Home" />,
+    }),
+  },
+  EmiratesForm:{
+    screen: EmiratesForm,
+    navigationOptions: ({ navigation }) => ({
+      title: "",
     }),
   },
   Home: {
